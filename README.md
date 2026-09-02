@@ -16,3 +16,6 @@ list
 set
 read_write
 stock_market & jokes API
+
+automation1
+log analyzer 
