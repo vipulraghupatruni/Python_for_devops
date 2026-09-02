@@ -1,0 +1,29 @@
+import logging
+
+# 1. Setup logging to write to 'app.log'
+logging.basicConfig(
+    filename="app.log",
+    level=logging.DEBUG,  # Captures DEBUG and everything above it
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+
+# 2. Write messages to the log file
+logging.debug("This is a DEBUG message (used for troubleshooting).")
+logging.info("This is an INFO message (normal system operation).")
+logging.warning("This is a WARNING message (something might be wrong).")
+logging.error("This is an ERROR message (something went wrong!).")
+logging.critical("This is a CRITICAL message (the app is crashing!!).")
+
+print("Logs successfully written to app.log!")
+
+# Write standard messages
+logging.info("This is an INFO message (normal system operation).")
+
+# Write the custom SKIP message using logging.log()
+logging.log(SKIP_LEVEL_NUM, "This is a SKIP message (operation bypassed).")
+
+logging.warning("This is a WARNING message (something might be wrong).")
+logging.error("This is an ERROR message (something went wrong!).")
+
+print("Logs successfully written to app.log!")
